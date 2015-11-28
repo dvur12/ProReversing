@@ -228,3 +228,8 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Binaries
+*.dll
+*.exe
+*.lib
