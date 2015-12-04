@@ -2,40 +2,53 @@
 	File:		ProReversing.h
 	Date:		27.11.15
 	Purpose:	This project gathers anti-anti-reversing techniques into an open library.
-	The resulting DLL can be easily incorporated into all reverse engineering tools.
+				The resulting DLL can be easily incorporated into all reverse engineering tools.
 */
 
 #pragma once
 
 /** Headers *****************************************************************/
 
-#include <Windows.h>
-#include "../Common/Common.h"
-
 /** Functions ****************************************************************/
 
 /*
-	Function Name:	EnableProReversing
-	Parameters:		pszOption [-in-] - Represents list of ProReversing functions to be enabled
+	Function Name:	SafeEnableProReversing
+	Parameters:		RunDll interface.
+					hwnd		-		IN		- Window handle
+					hinst		-		IN		- DLL's instance handle
+					lpszCmdLine -		IN		- ASCIIZ command line your DLL should parse
+					nCmdShow	-		IN		- Describes how your DLL's windows should be displayed
 	Return Value:	STATUS_CODE
 	Details:		Enabling ProReversing functionality
 	Date:			28.11.15
 	Author:			Dvir Atias
 */
 STATUS_CODE
-EnableProReversing(
-	__in PTSTR pszOption
+WINAPI
+SafeEnableProReversing(
+	__in HWND hwnd,
+	__in HINSTANCE hinst,
+	__in PTSTR lpszCmdLine,
+	__in int nCmdShow
 );
 
 /*
-	Function Name:	DisableProReversing
-	Parameters:		pszOption [-in-] - Represents list of ProReversing functions to be disabled
+	Function Name:	SafeDisableProReversing
+	Parameters:		RunDll interface.
+					hwnd		-		IN		- Window handle
+					hinst		-		IN		- DLL's instance handle
+					lpszCmdLine -		IN		- ASCIIZ command line your DLL should parse
+					nCmdShow	-		IN		- Describes how your DLL's windows should be displayed
 	Return Value:	STATUS_CODE
-	Details:		Disabling ProReversing functionality
+	Details:		Enabling ProReversing functionality
 	Date:			28.11.15
 	Author:			Dvir Atias
 */
 STATUS_CODE
-DisableProReversing(
-	__in PTSTR pszOption
+WINAPI
+SafeDisableProReversing(
+	__in HWND hwnd,
+	__in HINSTANCE hinst,
+	__in PTSTR lpszCmdLine,
+	__in int nCmdShow
 );
