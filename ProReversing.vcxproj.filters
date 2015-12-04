@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{99a0f793-40e2-4f96-885a-9d0a6379772c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProReversing">
+      <UniqueIdentifier>{fb8004e3-7b82-44cc-94e1-e920efeeae5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ProReversing\ProReversing.h">
+      <Filter>ProReversing</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProReversing\Exports.def">
+      <Filter>ProReversing</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ProReversing\ProReversing.c">
+      <Filter>ProReversing</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Common.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
